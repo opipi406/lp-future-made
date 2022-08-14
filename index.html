@@ -32,6 +32,45 @@
 <body>
   <div class="wrap">
 
+    <!-- Header -->
+    <header>
+      <div class="header">
+        <h1 class="header__title"><a href="/">Future Made</a></h1>
+        <span class="spacer"></span>
+        <nav class="header__nav">
+          <!-- Global Menu -->
+          <div class="menu-container">
+            <ul class="menu">
+              <li class="menu__item"><a href="#">HOME</a></li>
+              <li class="menu__item"><a href="#">SHOP</a></li>
+              <li class="menu__item"><a href="#">NEWS</a></li>
+              <li class="menu__item"><a href="#">CONTACT</a></li>
+            </ul>
+          </div>
+          <!-- /Global Menu -->
+        </nav>
+        <button class="burger-menu">
+          <div class="burger-menu__btn">
+            <div class="burger-menu-line"></div>
+          </div>
+          <nav class="burger-menu__nav">
+            <!-- Global Menu (ハンバーガーメニュー) -->
+            <div class="menu-container">
+              <ul class="menu">
+                <li class="menu__item"><a href="#">HOME</a></li>
+                <li class="menu__item"><a href="#">SHOP</a></li>
+                <li class="menu__item"><a href="#">NEWS</a></li>
+                <li class="menu__item"><a href="#">CONTACT</a></li>
+              </ul>
+            </div>
+            <!-- /Global Menu (ハンバーガーメニュー) -->
+          </nav>
+          <div class="burger-overlay"></div>
+        </button>
+      </div>
+    </header>
+    <!-- /Header -->
+
     <!-- Footer -->
     <footer>
       <p id="copyright">&copy; opipi. 2022.</p>
@@ -45,6 +84,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <!-- <script src="js/bundle.js"></script> -->
   <script src="js/dev/anim.js"></script>
+  <script src="js/dev/burger-menu.js"></script>
 </body>
 
 </html>
