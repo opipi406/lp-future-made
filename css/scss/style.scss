@@ -1,11 +1,153 @@
 @import "colors";
+@import "variables";
 @import "media-query";
 @import "common";
 
+#new {
+  position: relative;
 
+  padding-left: calc(100% - 400px);
+
+  color: text-palette(inverse);
+  background: url("../img/bg_01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+
+    content: "";
+
+    background-color: #ffffff87;
+
+    inset: 0;
+  }
+}
+
+#new h2 {
+  font-family: $sub-font;
+  font-size: 4rem;
+
+  position: relative;
+
+  margin-bottom: 48px;
+
+  &::after {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+
+    height: 3px;
+
+    content: "";
+
+    background-color: text-palette(inverse);
+  }
+}
+#new p {
+  position: relative;
+}
+
+#accessories {
+  position: relative;
+
+  padding-left: calc(100% - 400px);
+
+  background: url("../img/bg_02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+
+    content: "";
+
+    background-color: #00000068;
+
+    inset: 0;
+  }
+}
+#accessories h2 {
+  font-size: 3rem;
+
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 48px;
+
+  letter-spacing: 3px;
+
+  @include mq-down(xs) {
+    font-size: 15vw;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    left: 0;
+
+    height: 1px;
+
+    content: "";
+
+    background-color: text-palette();
+  }
+}
+#accessories p {
+  position: relative;
+
+  margin-bottom: 40px;
+}
+#accessories .visual-container {
+  padding-bottom: 200px;
+}
+
+.visual-container {
+  margin: 0 20px;
+  padding-top: 200px;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-right: 12px;
+  padding-bottom: 100px;
+  padding-left: 12px;
+}
+
+.heading {
+  font-size: 1rem;
+
+  max-width: 200px;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 5px;
+
+  text-align: center;
+
+  border: thick double text-palette();
+  background: ui-palette();
+}
+
+.view-more-wrap {
+  margin-bottom: 24px;
+  padding: 0 20px;
+
+  text-align: right;
+}
 
 @import "header";
 @import "footer";
 @import "burger-menu";
 @import "global-nav";
 @import "fv";
+@import "product";

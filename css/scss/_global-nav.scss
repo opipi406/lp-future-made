@@ -8,7 +8,6 @@
   text-align: center;
 
   & > a {
-    font-family: "Montserrat", sans-serif;
     font-size: $font-size;
     font-weight: 500;
 
@@ -35,7 +34,7 @@
   & > .menu__item {
     position: relative;
 
-    width: 70px;
+    width: 80px;
     margin-right: 8px;
 
     @include g-nav-link(0.8rem);

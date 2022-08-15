@@ -2,10 +2,12 @@
 @import "media-query";
 
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "游明朝","Yu Mincho",YuMincho,"Hiragino Mincho Pro",serif;
   font-size: 100%;
 
   line-height: 1;
+
+  letter-spacing: 1px;
 
   color: text-palette();
   background-color: bg-palette();
@@ -34,4 +36,143 @@ a {
   cursor: pointer;
 
   -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  line-height: 1.7;
+}
+
+
+/*-----------------------------------------------------
+  丸ボタン
+------------------------------------------------------*/
+.btn-circle {
+  position: relative;
+
+  display: block;
+
+  width: 100px;
+  height: 100px;
+  line-height: 80px;
+  margin-left: auto;
+
+  transition: 0.3s;
+  text-align: center;
+
+  color: #707070;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  background-color: #ebedeb;
+
+  &::before, &::after {
+    position: absolute;
+
+    height: 1px;
+
+    content: "";
+
+    background-color: #707070;
+  }
+  &::before {
+    right: 0;
+    bottom: 30px;
+    left: 25px;
+
+    width: 50%;
+
+    transition: 0.3s;
+  }
+  &::after {
+    right: 23px;
+    bottom: 34px;
+
+    width: 15px;
+
+    transition: 0.3s;
+    transform: rotate(35deg);
+  }
+
+  &:hover {
+
+    background-color: #b1b1b1;
+
+    &::before {
+      left: 30px;
+    }
+    &::after {
+      right: 18px;
+    }
+  }
+}
+
+/*-----------------------------------------------------
+  矢印ボタン
+------------------------------------------------------*/
+.btn-arrow {
+  position: relative;
+
+  &::before, &::after {
+    position: absolute;
+
+    height: 1px;
+
+    content: "";
+
+    background-color: text-palette();
+  }
+
+  &::before {
+    right: -20px;
+    bottom: -5px;
+    left: 0;
+
+    transition: 0.3s;
+  }
+  &::after {
+    right: -20px;
+    bottom: 0;
+
+    width: 15px;
+
+    transition: 0.3s;
+    transform: rotate(35deg);
+  }
+
+  &:hover {
+    &::before {
+      right: -30px;
+      left: 10px;
+    }
+    &::after {
+      right: -30px;
+    }
+  }
+}
+
+.btn-square {
+  position: relative;
+
+  padding: 12px 60px;
+  padding-right: 80px;
+
+  transition: all 0.2s;
+
+  border: 1px solid text-palette();
+
+  &::after {
+    position: absolute;
+
+    margin-left: 8px;
+
+    content: ">>";
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: #ffffff45;
+
+    &::after {
+      margin-left: 12px;
+    }
+  }
 }

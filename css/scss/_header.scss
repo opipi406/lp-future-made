@@ -3,6 +3,7 @@
 ------------------------------------------------------*/
 @import "media-query";
 @import "colors";
+@import "variables";
 $header-height: 80px;
 
 
@@ -39,6 +40,7 @@ header {
   }
 
   &__title {
+    font-family: $sub-font;
     font-size: 1.5rem;
 
     color: text-palette();

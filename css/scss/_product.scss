@@ -1,0 +1,46 @@
+@import "colors";
+@import "media-query";
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  @include mq-down(sm) {
+    flex-direction: column;
+  }
+
+  > * + * {
+    margin: 0 0 0 60px;
+
+    @include mq-down(sm) {
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+.product {
+  width: 30%;
+
+  @include mq-down(sm) {
+    max-width: 300px;
+    width: 85%;
+  }
+
+  &__img {
+    width: 100%;
+
+    box-shadow: 10px 10px #80808094;
+
+    object-fit: cover;
+  }
+
+  &__body {
+    font-size: 1.2rem;
+
+    height: 80px;
+    margin-top: 18px;
+  }
+}
