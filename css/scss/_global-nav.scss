@@ -1,0 +1,80 @@
+/*-----------------------------------------------------
+  Global Navigation (Header Menu)
+------------------------------------------------------*/
+@import "colors";
+@import "media-query";
+
+@mixin g-nav-link($font-size) {
+  text-align: center;
+
+  & > a {
+    font-size: $font-size;
+    font-weight: 500;
+
+    display: block; // クリック範囲拡張用
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    color: text-palette();
+
+    &:hover {
+      color: text-palette(main, dark);
+    }
+  }
+}
+
+// ヘッダーメニュー
+.header__nav .menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  user-select: none;
+
+  & > .menu__item {
+    position: relative;
+
+    width: 80px;
+    margin-right: 8px;
+
+    @include g-nav-link(0.8rem);
+
+    .icon {
+      font-size: 1.5rem;
+
+      margin-bottom: 8px;
+    }
+  }
+
+  & > * + * {
+    padding-left: 8px;
+
+    border-left: 1px solid gray;
+  }
+}
+
+// ハンバーガーメニュー
+.burger-menu__nav .menu {
+  padding: 80px 24px;
+
+  user-select: none;
+
+  & > .menu__item {
+    position: relative;
+
+    margin-bottom: 18px;
+
+    @include g-nav-link(1.2rem);
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      font-size: 1.8rem;
+
+      margin-right: 16px;
+    }
+  }
+}
